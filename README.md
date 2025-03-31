@@ -11,7 +11,7 @@ This repository contains a demonstration script for bridging ERC20 tokens from E
   
 ## 📋 Prerequisites  
   
-- Node.js (v18+)  
+- Node.js (v14+)  
 - npm or yarn  
 - An Ethereum wallet with:  
   - Some ETH for gas fees  
@@ -21,32 +21,32 @@ This repository contains a demonstration script for bridging ERC20 tokens from E
 ## 🔧 Installation  
   
 1. Clone this repository:  
-   ``` 
-   git clone https://github.com/yourusername/zkcandy-bridge-demo.git  
-   cd zkcandy-bridge-demo  
-   
+```bash  
+git clone https://github.com/yourusername/zkcandy-bridge-demo.git  
+cd zkcandy-bridge-demo  
+
 ```  
   
 2. Install dependencies:  
-   ```  
-   npm install  
-   
+```bash  
+npm install  
+
 ```  
   
 3. Create a `.env` file in the root directory with the following variables:  
-   ```
+```
   
-   PRIVATE_KEY=your_ethereum_private_key  
-   INFURA_API_KEY=your_infura_api_key  
-   
+PRIVATE_KEY=your_ethereum_private_key  
+INFURA_API_KEY=your_infura_api_key  
+
 ```  
   
 ## 🏃‍♂️ Running the Demo  
   
 To run the token deposit demo:  
   
-``` 
-node index.js  
+```bash  
+node deposit.js  
 
 ```  
   
@@ -82,7 +82,7 @@ Once you've successfully bridged your token, you can submit it to be included in
 1. Create a new branch in the bridge UI repository  
 2. Add your token's information using this template:  
   
-```  
+```json  
 {  
   "chainId": 1,  
   "l1Address": "your_token_l1_address",  
@@ -113,4 +113,6 @@ This is a demonstration script. Always exercise caution when using scripts that 
   
 ## 📜 License  
   
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details. 
+  
+
