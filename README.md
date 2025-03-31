@@ -21,16 +21,14 @@ This repository contains a demonstration script for bridging ERC20 tokens from E
 ## 🔧 Installation  
   
 1. Clone this repository:  
-   ```
-bash  
+   ``` 
    git clone https://github.com/yourusername/zkcandy-bridge-demo.git  
    cd zkcandy-bridge-demo  
    
 ```  
   
 2. Install dependencies:  
-   ```
-bash  
+   ```  
    npm install  
    
 ```  
@@ -47,8 +45,7 @@ bash
   
 To run the token deposit demo:  
   
-```
-bash  
+``` 
 node index.js  
 
 ```  
@@ -85,8 +82,7 @@ Once you've successfully bridged your token, you can submit it to be included in
 1. Create a new branch in the bridge UI repository  
 2. Add your token's information using this template:  
   
-```
-json  
+```  
 {  
   "chainId": 1,  
   "l1Address": "your_token_l1_address",  
