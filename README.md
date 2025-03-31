@@ -11,7 +11,7 @@ This repository contains a demonstration script for bridging ERC20 tokens from E
   
 ## 📋 Prerequisites  
   
-- Node.js (v14+)  
+- Node.js (v18+)  
 - npm or yarn  
 - An Ethereum wallet with:  
   - Some ETH for gas fees  
@@ -46,7 +46,7 @@ INFURA_API_KEY=your_infura_api_key
 To run the token deposit demo:  
   
 ```bash  
-node deposit.js  
+node index.js  
 
 ```  
   
