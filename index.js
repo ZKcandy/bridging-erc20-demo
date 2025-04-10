@@ -7,8 +7,8 @@ async function depositTokenToL2() {
   // Configuration  
   const PRIVATE_KEY = process.env.PRIVATE_KEY //populate value in .env file
   const L1_TOKEN_ADDRESS = "0xf9c53268e9de692ae1b2ea5216e24e1c3ad7cb1e"; // idexo token example
-  const CUSTOM_BRIDGE_ADDRESS = "0xd7f9f54194c633f36ccd5f3da84ad4a1c38cb2cb"; // elastic chain bridge 
-  const AMOUNT_TO_DEPOSIT = ethers.parseEther("100"); // Adjust amount as needed  
+  const CUSTOM_BRIDGE_ADDRESS = "0xbeD1EB542f9a5aA6419Ff3deb921A372681111f6"; // elastic chain bridge 
+  const AMOUNT_TO_DEPOSIT = ethers.parseEther("1"); // Adjust amount as needed  
   
   try {  
     // Setup providers and wallet  
@@ -26,33 +26,16 @@ async function depositTokenToL2() {
     );  
       
     const balance = await tokenContract.balanceOf(await wallet.getAddress());  
-    console.log("Token balance:", ethers.formatEther(balance));  
-  
-    console.log("Approving ERC20 token...");  
-      
-    // First approve the token  
-    const approveTx = await wallet.approveERC20(  
-      L1_TOKEN_ADDRESS,  
-      "1000000000000000000000",  
-      {  
-        bridgeAddress: CUSTOM_BRIDGE_ADDRESS,  
-        gasLimit: 100000n // Add explicit gas limit  
-      }  
-    );  
-  
-    const approveReceipt = await approveTx.wait();  
-    console.log("Token approved successfully! TX:", approveReceipt.hash);  
+    console.log("Token balance:", ethers.formatEther(balance));   
   
     console.log("Initiating deposit...");  
       
     // Add more detailed deposit parameters  
     const depositTx = await wallet.deposit({  
       token: L1_TOKEN_ADDRESS,
-      to: "0x229D54a85c23D81E852B8B03c5fc7E84B490eBe0",  
+      to: "0x229D54a85c23D81E852B8B03c5fc7E84B490eBe0", //change to your destination address 
       amount: AMOUNT_TO_DEPOSIT,  //adjust as needed
-      approveERC20: false, //make true if not using approve tx above  
-      l2GasLimit: 1000000n,  
-      gasPerPubdataByte: 800n,  
+      approveERC20: true,    
       overrides: {
         bridgeAddress: CUSTOM_BRIDGE_ADDRESS,  
         gasLimit: 1000000n, // Add explicit gas limit for the deposit  
