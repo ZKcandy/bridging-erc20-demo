@@ -1,0 +1,12 @@
+{  
+  "chainId": 1,
+  "l1Address": "0x25500000d700bbE27104577CCcce8eAbCC96c8ad",
+  "l2Address": "0x78864b90084Ee5BD29e3Df8Df5BDEb41aE7aD48C",
+  "learnMoreUrl": "https://kroma.network/",
+  "bridges": [],
+  "symbol": "KRO",
+  "bridgedSymbol": "KRO",
+  "name": "Kroma",
+  "decimals": 18,
+  "imgUrl": "icons/kro.svg"
+}  
